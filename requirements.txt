@@ -5,3 +5,4 @@ groq
 uvicorn
 jinja2
 python-multipart
+requests
