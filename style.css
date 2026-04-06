@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1) !important;
+    font-family: 'Comic Sans MS', cursive;
+    overflow-y: auto;
+    min-height:100vh;
+    text-align: center;
+}
+
+.main-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 10px hotpink;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px hotpink;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: hotpink;
+    color: white;
+}
+
+.barbie-container {
+    position: absolute;
+    bottom: 0;
+
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 2s;
+}
+
+.barbie-container img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px hotpink;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* floating hearts */
+.hearts {
+    content: "💖 💕 💗 💓 💘 💝";
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    0% { top: 100%; }
+    100% { top: -10%; }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Comic Sans MS', cursive;
+    min-height:100vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+/* Background images container */
+.background-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 15s infinite;
+    z-index: 0;
+}
+
+/* Semi-transparent overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* adjust darkness */
+    z-index: 1;
+}
+
+/* Main content above background */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+}
+
+h1 {
+    font-size: 60px;
+    text-shadow: 2px 2px 10px hotpink;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px hotpink;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: hotpink;
+    color: white;
+}
+
+/* Floating hearts */
+.hearts::before {
+    content: "💖 💕 💗 💓 💘 💝";
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    animation: float 10s linear infinite;
+}
+
+/* Hearts animation */
+@keyframes float {
+    0% { top: 100%; }
+    100% { top: -10%; }
+}
+
+/* Slider animation */
+@keyframes slide {
+    0%   { background-image: url('images/barbie1.jpg'); }
+    33%  { background-image: url('images/barbie2.jpg'); }
+    66%  { background-image: url('images/barbie3.jpg'); }
+    100% { background-image: url('images/barbie1.jpg'); }
+}
+/* Dress Up page specific background */
+.dressup-bg {
+    animation: none; /* static background for now */
+    background-image: url('images/dressup-bg.jpg'); /* your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container on top */
+.dressup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.dressup-container input, .dressup-container select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#recommendations {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #ff69b4;
+}
+#resultContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#imageAndTone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#previewImage {
+    width: 260px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+#skinToneCircle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+#recommendations {
+    background-color: #ffe6f2;   /* soft light pink */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+    width: 300px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#recommendations h3 {
+    margin-top: 0;
+    color: #ff4da6;
+}
+
+#recommendations ul {
+    padding-left: 20px;
+}
+
+#recommendations li {
+    margin-bottom: 8px;
+}
+#imageAndTone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;   /* 👈 tiny space between image and circle */
+}
+
+#skinToneCircle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+#imageAndTone {
+    background-color: #fff0f6;  /* soft pastel box */
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+}
+#tryPairBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ff66b2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+    display: none;   /* hidden at first */
+    transition: all 0.3s ease;
+}
+
+#tryPairBtn:hover {
+    background-color: #ff3385;
+}
+#resultContainer {
+    display: none;
+}

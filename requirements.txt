@@ -1,0 +1,7 @@
+fastapi
+gunicorn
+openai
+groq
+uvicorn
+jinja2
+python-multipart

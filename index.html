@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cherish AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="music/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="hearts"></div>
+
+    <div id="frontpage">
+    <div class="main-content">
+        <h1>Welcome to Cherish AI 💕</h1>
+        <button onclick="handleButtonClick()">Let's Dress Up!</button>
+    </div>
+
+    <div class="background-slider">
+        <div class="overlay"></div>
+    </div>
+    </div>
+
+    <!--dressup page-->
+    <div id="dressUpPage" style="display:none;">
+<div class="background-slider dressup-bg">
+<div class="overlay"></div>
+</div>
+<div class="dressup-container">
+<h1>Upload Yourself & Select Preferences</h1>
+<input type="file" id="userImage" accept="image/*">
+<div class="preferences">
+<label>
+Favorite Colors:
+<input type="text" id="favColors" placeholder="e.g., pink, blue">
+</label>
+<label>
+    Gender :
+    <select id="gender">
+  <option value="female">Female</option>
+  <option value="male">Male</option>
+</select>
+</label>
+<label>
+Style Preference:
+<select id="stylePref">
+<option value="casual">Casual</option>
+<option value="formal">Formal</option>
+<option value="party">Party</option>
+<option value="sporty">Sporty</option>
+</select>
+</label>
+</div>
+<button onclick="analyzeUserImage()">Get Outfit Recommendations</button>
+
+
+<div id="resultContainer">
+    <div id="imageAndTone">
+        <img id="previewImage" />
+        <div id="skinToneCircle"></div>
+    </div>
+
+    <div id="recommendations"></div>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+<script src="dressup.js"></script>
+<button id="tryPairBtn" onclick="window.location.href='pair.html'">
+    Try & Pair
+</button>
+</body>
+</html>

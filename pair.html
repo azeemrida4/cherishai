@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Try & Pair</title>
+    <link rel="stylesheet" href="pair.css">
+</head>
+<body>
+    <div class="overlay">
+
+<h1 class="mainTitle">Try & Pair 💖</h1>
+
+<div class="wardrobeContainer">
+
+    <!-- TOP SECTION -->
+    <div class="outfitSection">
+        <button onclick="prevTop()">◀</button>
+        <img id="topImage" src="tops/top1.jpg">
+        <button onclick="nextTop()">▶</button>
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="outfitSection">
+        <button onclick="prevBottom()">◀</button>
+        <img id="bottomImage" src="bottoms/bottom1.jpg">
+        <button onclick="nextBottom()">▶</button>
+    </div>
+
+</div>
+    
+<button id="shopBtn" onclick="window.location.href='shop.html'">
+    🛍 Shop
+</button>
+<script src="pair.js"></script>
+    </div>
+</body>
+</html>

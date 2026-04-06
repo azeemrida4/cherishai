@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ffe6f2;
+}
+
+h1 {
+    margin-top: 40px;
+    color: deeppink;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.shop-card {
+    text-decoration: none;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.shop-card:hover {
+    transform: scale(1.08);
+}
+
+.shop-card img {
+    width: 80px;
+    height: 80px;
+}
+.curated-title {
+    margin-top: 60px;
+    color: deeppink;
+}
+
+.curated-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
