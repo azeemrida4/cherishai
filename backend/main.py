@@ -10,25 +10,23 @@ from PIL import Image
 from transformers import pipeline
 
 # -------------------- LOAD ENV --------------------
-from pathlib import Path
-
-env_path = Path(__file__).parent / ".env"
-load_dotenv(dotenv_path=env_path)
+from dotenv import load_dotenv
+load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
-    raise ValueError("GROQ_API_KEY not found in .env")
+    print("WARNING: GROQ_API_KEY not found")
 
 # -------------------- FASTAPI --------------------
 app = FastAPI()
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-app.mount("/static", StaticFiles(directory="../"), name="static")
+app.mount("/static", StaticFiles(directory="."), name="static")
 
 @app.get("/")
 def read_root():
-    return FileResponse("../index.html")
+    return FileResponse("index.html")
 
 app.add_middleware(
     CORSMiddleware,
