@@ -1,5 +1,5 @@
 # backend/main.py
-import torch
+
 import os
 import io
 import requests
@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-from transformers import pipeline
+
 
 # -------------------- LOAD ENV --------------------
 from dotenv import load_dotenv
@@ -37,10 +37,7 @@ app.add_middleware(
 )
 
 # -------------------- HUGGINGFACE MODEL --------------------
-image_pipeline = pipeline(
-    "image-classification",
-    model="google/vit-base-patch16-224"
-)
+
 
 # -------------------- GROQ CONFIG --------------------
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
@@ -100,10 +97,7 @@ async def analyze_image(
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
 
     # Image classification
-    results = image_pipeline(image)
-
-    # Take top 3 labels for context
-    labels = [r["label"] for r in results[:3]]
+    labels = ["outfit", "clothes", "style"]
     image_description = ", ".join(labels)
 
     fav_colors = colors.split(",") if colors else []

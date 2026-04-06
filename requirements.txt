@@ -8,5 +8,3 @@ python-multipart
 requests
 python-dotenv
 Pillow
-transformers
-torch
